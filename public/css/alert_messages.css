@@ -1,0 +1,18 @@
+.alert-messages{
+    text-wrap: balance; 
+    font-size: 0.8rem; 
+    text-align: center; 
+    margin: auto;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.succes-message{
+    background-color: var(--succes-bg);
+    color: var(--succes-text);
+
+}
+.error-message{
+    background-color: var(--error-bg);
+    color: var(--error-bg);  
+}

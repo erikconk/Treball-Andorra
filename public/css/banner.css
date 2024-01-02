@@ -1,0 +1,28 @@
+.banner-container{
+    /*
+    width: 95%;
+    border-radius: 5px;
+    */
+    padding-bottom: clamp(2rem, 4vw, 3rem);
+    margin: auto;
+    z-index: 100;
+}
+.banner-content{
+    font-family: 'lilita-one';
+    color: var(--soft-grey);
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
+    padding: 1rem 1.5rem;
+    text-align: center;
+}
+.banner-strong{
+    font-family: 'lilita-one';
+    color: rgb(41, 108, 146);
+    border-radius: 10px;
+}
+.mySwiper{
+    background-color: rgba(243, 243, 243, 0.1);
+    z-index: -10;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 95%;
+    border-radius: 5px;
+}

@@ -1,0 +1,119 @@
+#upload-avatar-front-view{
+    display: none;
+}
+
+.fw-center-container{
+    background-color: white;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: fit-content;
+    min-width: 80%;
+}
+.uf-title p{
+    font-size: 1.5rem;
+    color: var(--soft-grey-title2);
+    border-bottom: 1px solid var(--soft-grey);
+}
+/*.uf-content img{
+    width: 70px;
+    padding: 0.2rem;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+}*/
+.ufc-images-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.5rem 0;
+}
+.ufc-images-container img{
+    width: 70px;
+    padding: 0.2rem;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+}
+.ufc-images-container-post{
+    width: 100%;
+    height: 400px;
+    border: 1px solid var(--very-soft-grey);
+    overflow: scroll;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0.5rem 0;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+.ufc-images{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    transition: background-color 0.5s;
+    margin: auto;
+    padding: 0.5rem;
+}
+.ufc-images-container-post img{
+    width: 180px;
+    border: 5px solid rgba(0,0,0,0);
+    border-radius: 5px;
+    transition: border-color 0.5s;
+}
+.ufc-images-container-post img:hover{
+    border-color: rgba(0, 0, 0, 0.2);
+    transition: border-color 0.5s;
+}
+.ufc-images-container img:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s;
+}
+.img-preview{
+    background-color: white;
+    transition: background-color 0.5s;
+}
+.selected-avatar{
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: rgba(0,0,0,0);
+}
+.uf-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.fw-center-container:last-child{
+    align-content: end;
+}
+.uf-input-image{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.uf-input-image img{
+    width: 70px;
+    height: 70px;
+    border-radius: 1000%;
+    padding: 0;
+}
+
+input[type=file]::file-selector-button {
+    color: var(--soft-grey-title2);
+    background-color: #fff;
+    border: 0px;
+    border-right: 1px solid #e5e5e5;
+    padding: 10px 15px;
+    margin-right: 20px;
+    transition: .5s;
+}
+
+input[type=file]::file-selector-button:hover {
+    background-color: #eee;
+    border: 0px;
+    color: black;
+    border-right: 1px solid #e5e5e5;
+}

@@ -1,0 +1,30 @@
+.submit-input{
+    margin: auto;
+    margin-top: 1.5rem;
+}
+.submit-input button{
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--logo-color-1);
+    color: white;
+    font-size: 1rem;
+    padding: 0.2rem;
+    transition: background-color 0.5s;
+}
+.submit-input button:hover{
+    background-color: rgb(15, 76, 112);
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+@media only screen and (max-width:800px){
+    .submit-input{
+        width: 90%;
+    }
+
+}
+@media only screen and (min-width:800px){
+    .submit-input{
+        width: 30%;
+    }
+}

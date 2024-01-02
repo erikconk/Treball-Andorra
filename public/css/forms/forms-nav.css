@@ -1,0 +1,37 @@
+.forms-nav{
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+}
+.fn-btn:disabled{
+    padding: 0.2rem 1rem;
+    background-color: white;
+    color: var(--soft-grey);
+    border: none;
+    cursor: default;
+}
+.fn-rigth{
+    margin-left: auto;
+}
+.fn-rigth:enabled{
+    border: none;
+    background-color: var(--logo-color-1);
+    color: white;
+    padding: 0.2rem 1rem;
+    border-radius: 5px;
+    transition: background-color 1s, color 1s;
+}
+.fn-left:enabled{
+    border: none;
+    background-color: white;
+    border: 1px solid var(--logo-color-1);
+    color: var(--logo-color-1);
+    padding: 0.2rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.5s, color 0.5s;
+}
+.fn-left:hover{
+    background-color: var(--logo-color-1);
+    color: white;
+    transition: background-color 0.5s, color 0.5s;
+} 

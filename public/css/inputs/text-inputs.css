@@ -1,0 +1,32 @@
+.single-text-input-icon{
+    display: flex;
+    flex-direction: row;
+    margin: 0.6rem auto;
+    gap: 0.5rem;
+    width: 100%;
+}
+.single-text-input-icon > input{
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    width: 100%;
+    border: 1px solid var(--soft-grey);
+    border-radius: 5px;
+}
+.single-text-input-icon > img{
+    margin: auto;
+    width: 15px;
+    height: 15px;
+    opacity: 0.4;
+}
+.valid-input{
+    color: rgb(40, 172, 91);
+}
+@media only screen and (max-width:800px){
+}
+@media only screen and (min-width:800px){
+    .single-text-input-icon{
+        width: 50%;
+        margin: 0.6 auto;
+    }
+}

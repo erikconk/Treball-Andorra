@@ -1,0 +1,13 @@
+.forms-head{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.fh-title{
+    align-self: center;
+    color: var(--soft-grey);
+}
+.fh-subtitle{
+    color: rgb(95, 112, 122);
+    text-align: center;
+}

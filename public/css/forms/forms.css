@@ -1,0 +1,76 @@
+.form-element:not(:first-child){
+    display: none;
+}
+.form-element{
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+    margin: auto;
+    animation: fadeIn 1s;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+.form-element-fit{
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+    margin: auto;
+    animation: fadeIn 1s;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+.privaci-text{
+    width: 100%;
+    height: 200px;
+    overflow: scroll;
+}
+.account-check-input{
+    color: var(--soft-grey);
+    font-size: 0.8rem;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+/*
+@media only screen and (max-width:800px){
+    .form-element{
+        width: 85%;
+        height: 70vh;
+        position: absolute;
+        top:5rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .form-element-fit{
+        width: 85%;
+        position: absolute;
+        top:5rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+@media only screen and (min-width:800px){
+    .form-element{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        height: 50vh;
+    }
+    .form-element-fit{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40%;
+    }
+}
+*/

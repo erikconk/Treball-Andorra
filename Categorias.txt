@@ -1,0 +1,247 @@
+    Turisme i Hostaleria:
+        Hostaleria
+        Turisme
+        Recepcionista d'hotel
+        Cambrer
+        Cuiner
+
+    Vendes i Màrqueting:
+        Venedor
+        Representant de vendes
+        Màrqueting digital
+        Responsable de màrqueting
+
+    Serveis Financers:
+        Banquer
+        Gestor de comptes
+        Analista financer
+        Assessor financer
+
+    Salut i Ciències Socials:
+        Metge
+        Infermer/a
+        Psicòleg/a
+        Treballador/a social
+
+    Educació:
+        Professor/a
+        Educador/a
+        Tutor/a
+        Director/a d'escola
+
+    Construcció i Enginyeria:
+        Enginyer civil
+        Arquitecte/a
+        Paleta
+        Electricista
+
+    Informàtica i Tecnologia:
+        Desenvolupador de programari
+        Enginyer de xarxes
+        Especialista en seguretat informàtica
+        Analista de dades
+
+    Administració i Oficines:
+        Administrador d'oficina
+        Secretari/a
+        Gestor/a de recursos humans
+        Assistent administratiu/a
+
+    Serveis al Client:
+        Agent d'atenció al client
+        Suport tècnic
+        Assessor de serveis
+
+    Transport i Logística:
+        Conductor/a de transport públic
+        Operari/a d'almacen
+        Coordinador/a logístic/a
+
+    Art i Entreteniment:
+        Artista
+        Músic/a
+        Actor/actriu
+        Director/a de producció audiovisual
+
+    Creativitat i Disseny:
+        Dissenyador/a gràfic/a
+        Fotògraf/a
+        Rector/a publicitari/a
+        Il·lustrador/a
+
+    Energies Renovables:
+        Enginyer/a d'energies renovables
+        Tècnic/a d'instal·lacions solars
+        Especialista en eficiència energètica
+
+    Comerç:
+        Dependent/a de botiga
+        Gerent de botiga
+        Venedor/a al detall
+
+    Assessorament Legal:
+        Advocat/advocada
+        Assessor/a legal
+        Notari/a
+
+
+FILESET:
+
+    Hostaleria
+
+    Turisme
+
+    Recepcionista d'hotel
+
+    Cambrer
+
+    Cuiner
+
+    Venedor
+
+    Representant de vendes
+
+    Màrqueting digital
+
+    Responsable de màrqueting
+
+    Banquer
+
+    Gestor de comptes
+
+    Analista financer
+
+    Assessor financer
+
+    Metge
+
+    Infermer/a
+
+    Psicòleg/a
+
+    Treballador/a social
+
+    Professor/a
+
+    Educador/a
+
+    Tutor/a
+
+    Director/a d'escola
+
+    Enginyer civil
+
+    Arquitecte/a
+
+    Paleta
+
+    Electricista
+
+    Desenvolupador de programari
+
+    Enginyer de xarxes
+
+    Especialista en seguretat informàtica
+
+    Analista de dades
+
+    Administrador d'oficina
+
+    Secretari/a
+
+    Gestor/a de recursos humans
+
+    Assistent administratiu/a
+
+    Agent d'atenció al client
+
+    Suport tècnic
+
+    Assessor de serveis
+
+    Conductor/a de transport públic
+
+    Operari/a d'almacen
+
+    Coordinador/a logístic/a
+
+    Artista
+
+    Músic/a
+
+    Actor/actriu
+
+    Director/a de producció audiovisual
+
+    Dissenyador/a gràfic/a
+
+    Fotògraf/a
+
+    Rector/a publicitari/a
+
+    Il·lustrador/a
+
+    Enginyer/a d'energies renovables
+
+    Tècnic/a d'instal·lacions solars
+
+    Especialista en eficiència energètica
+
+    Dependenta de botiga
+
+    Gerent de botiga
+
+    Venedor/a al detall
+
+    Advocat/advocada
+
+    Assessor/a legal
+
+    Notari/a
+
+
+Tags:
+
+SELECT 
+anuncios.anuncio_imagen, 
+categorias.categoria_name, 
+anuncios.anuncio_vacante, 
+anuncios.anuncio_descripcion, 
+anuncios.anuncio_sueldo, 
+ubicaciones.ubicacion_name, 
+tags.tag_name, 
+tags.tag_name, 
+tags.tag_name, 
+tags.tag_name, 
+tags.tag_name
+FROM anuncios
+INNER JOIN categorias ON anuncios.anuncio_categoria = categorias.categoria_id
+INNER JOIN ubicaciones ON anuncios.anuncio_ubicacion = ubicaciones.ubicacion_id
+INNER JOIN tags ON anuncios.anuncio_tag_contrato = tags.tag_id
+INNER JOIN tags ON anuncios.anuncio_tag_ubicacion = tags.tag_id
+INNER JOIN tags ON anuncios.anuncio_tag_formacion = tags.tag_id
+INNER JOIN tags ON anuncios.anuncio_tag_festivo = tags.tag_id
+INNER JOIN tags ON anuncios.anuncio_tag_horario = tags.tag_id
+
+CREATE VIEW ver_anuncios AS 
+SELECT
+    anuncios.anuncio_imagen,
+    categorias.categoria_name,
+    anuncios.anuncio_vacante,
+    anuncios.anuncio_descripcion,
+    anuncios.anuncio_sueldo,
+    ubicaciones.ubicacion_name,
+    contratos.tag_name AS tag_contrato,
+    ubicacion_tags.tag_name AS tag_ubicacion,
+    formacion_tags.tag_name AS tag_formacion,
+    festivo_tags.tag_name AS tag_festivo,
+    horario_tags.tag_name AS tag_horario
+FROM
+    anuncios
+JOIN categorias ON anuncios.anuncio_sector = categorias.categoria_id
+JOIN ubicaciones ON anuncios.anuncio_ubicacion = ubicaciones.ubicacion_id
+JOIN tags AS contratos ON anuncios.anuncio_tag_contrato = contratos.tag_id
+JOIN tags AS ubicacion_tags ON anuncios.anuncio_tag_ubicacion = ubicacion_tags.tag_id
+JOIN tags AS formacion_tags ON anuncios.anuncio_tag_formacion = formacion_tags.tag_id
+JOIN tags AS festivo_tags ON anuncios.anuncio_tag_festivo = festivo_tags.tag_id
+JOIN tags AS horario_tags ON anuncios.anuncio_tag_horario = horario_tags.tag_id;

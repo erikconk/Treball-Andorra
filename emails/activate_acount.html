@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treball Andorra</title>
+</head>
+<style>
+    @font-face{
+        font-family: ubuntu-regular;
+        src:url('{HOST}/public/fonts/Ubuntu-Regular.woff')
+    }
+    *{
+        padding: 0;
+        margin: 0;
+        font-size: 0.9rem;
+        font-family:ubuntu-regular;
+    }
+    p, form{
+        padding: 0.5rem;
+    }
+    .head{
+        padding: 1rem;
+    }
+    img{
+        width: 200px;
+    }
+    .content{
+        background-color: rgb(26, 103, 148);
+        color: white;
+    }
+    button{
+        font-size: 1rem;
+        color: rgb(26, 103, 148);
+        background-color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="head">
+        <img src="{HOST}/public/icons/logo.png">
+    </div>
+    <div class="content">
+        <p>Estimat usuari,<br> 
+            per acabar de validar el seu compte, <strong>fes clic al botó <i>d'activar</i>.</strong>
+            
+        </p>
+        <p>
+            Gràcies per fer part d'aquesta comunitat.
+        </p>
+        <form action="{HOST}/new_acount/activate_acount" method="POST">
+            <input type="hidden" name="user_email" value="{USER_EMAIL}">
+            <input type="hidden" name="user_token" value="{USER_TOKEN}">
+            <button type="submit">Activar</button>
+        </form>
+        <p>
+            <br>Atentament,<br>
+            l'equip de <strong><i>treballandorra.org</i></strong>
+        </p>
+    </div>
+</body>
+</html>

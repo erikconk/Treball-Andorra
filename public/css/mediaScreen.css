@@ -1,0 +1,76 @@
+@media only screen and (max-width:650px){
+    .alert-message{
+        width: 100%;
+    }
+    .form-element{
+        width: 85%;
+        height: 70vh;
+        position: absolute;
+        top:5rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .form-element-fit{
+        width: 85%;
+        position: absolute;
+        top:5rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .fc-doubles{
+        flex-direction: column;
+    }
+    .dbc-submenu-content-input input{
+        /*
+        width: 100%;
+        */
+    }
+    .dbc-submenu-content > div{
+        width: 100%;
+    }
+    /*
+    .dbc-submenu-content{
+        width: 100%;
+        margin: auto;
+    }
+    */
+}
+@media only screen and (min-width:650px){
+    .alert-message{
+        width: 50%;
+    }
+    .form-element{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        height: 50vh;
+    }
+    .form-element-fit{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40%;
+    }
+    .fc-doubles{
+        flex-direction: row;
+    }
+    .fc-doubles-text{
+        border-left: 1px solid var(--soft-grey);
+    }
+    .dbc-submenu-content-input input{
+        /*
+        width: 25%;
+        */
+    }
+    .db-content{
+        width: 75%;
+        margin: auto;
+    }
+    .succes-container, .error-container{
+        width: 50%;
+    }
+
+}

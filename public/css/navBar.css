@@ -1,0 +1,124 @@
+nav{
+    position: fixed;
+    width: 100vw;
+    padding: 0.3rem;
+    box-shadow: 5px -3px 5px black;
+    z-index: 10;
+    background-color: white;
+}
+.navBar-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+}
+.hamburger-lines {
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+.line {
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--blue);
+}
+  
+.line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+  
+.line2 {
+    transition: transform 0.2s ease-in-out;
+}
+  
+.line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
+.navBar-item{
+    display: flex;
+    margin: auto;
+}
+.logo-img{
+    width: 16rem;
+    width: clamp(260px, 4vw, 600px);
+    text-align: center;
+}
+.user-img-frame{
+    overflow: hidden;
+    width: clamp(35px, 4vw, 42px);
+    height: clamp(35px, 4vw, 42px);
+    display: flex;
+    align-items: center;
+    border-radius: 100%;
+}
+.user-img{
+    width: clamp(35px, 4vw, 42px);
+
+}
+
+.mainMenu-container{
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    transition: transform 1s;
+    z-index: 5;
+}
+.main-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+.main-menu > p{
+    color: var(--logo-color-1);
+}
+.main-menu a {
+    font-family: lilita-one;
+}
+
+.main-menu > p:hover{
+    color:rgb(37, 79, 117);
+}
+
+.userMenu-container{
+    border-radius: 0 0 5px 5px;
+    position: fixed;
+    background-color: white;
+    transition: right 0.5s;
+    border-left: 1px solid rgb(240, 245, 247);
+    border-right: 1px solid rgb(240, 245, 247);
+    z-index: 5;
+}
+.user-menu-item{
+    display: flex;
+}
+.user-menu-item > a {
+    color: rgb(141, 168, 194);
+    width: 100%;
+    padding: 0.2rem 1.5rem;
+    transition: background-color 0.5s, color 0.5s;
+    border-bottom: 1px solid rgb(240, 245, 247);
+}
+.user-menu-item > a:hover{
+    color: rgb(106, 120, 133);
+    background-color: rgba(148, 148, 148, 0.1);
+    transition: background-color 0.5s, color 0.5s;
+}
+.welcome-user{
+    color: rgb(116, 125, 133);
+    padding: 0.2rem 1.5rem;
+    border-bottom: 1px solid rgb(240, 245, 247);
+    background-color: rgb(236, 240, 243);
+}
+.welcome-user-hola{
+    font-weight: bold;
+    color: rgb(102, 110, 126);
+}

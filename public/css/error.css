@@ -1,0 +1,49 @@
+.error-container{
+    color: rgb(145, 20, 20);
+    background-color: rgb(250, 132, 132);
+    padding: 0.5rem 1rem;
+    border-left: 2px solid rgba(0,0,0,0.2);
+    font-size: 0.8rem;
+    text-align: center;
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: auto;
+    animation: entradaDesvanecimiento 10s forwards;
+}
+.succes-container{
+    color: rgb(20, 145, 72);
+    background-color: rgb(126, 216, 163);
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    margin: auto;
+    transform: translate(-50%, 0);
+    border-top: 2px solid rgba(0,0,0,0.2);
+    margin: auto;
+    animation: entradaDesvanecimiento 10s forwards;
+}
+
+.msg-close{
+    text-align: end;
+}
+@keyframes entradaDesvanecimiento {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    10%{
+        opacity: 1;
+        transform: translateX(-50%);
+    }
+    90%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
