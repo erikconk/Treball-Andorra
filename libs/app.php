@@ -15,7 +15,7 @@ class App{
 
         if(empty($url[0])){
             require_once 'controllers/index.php';
-            $controller = new Index($session, $url[0]);
+            $controller = new Index($session, "index");
             return False;
         }
         $controller_file = 'controllers/' . $url[0] . '.php'; 

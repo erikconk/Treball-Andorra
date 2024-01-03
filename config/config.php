@@ -33,4 +33,7 @@ define('AVATARS_USER', URL . '/public/app_images/avatars/users/');
 define('POST', URL . '/public/app_images/posts/');
 define('POST_DEFAULT', $_SERVER['DOCUMENT_ROOT'] . '/public/app_images/posts/defaults');
 define('POST_USER', URL . '/public/app_images/posts/users/');
+
+define('BOOTSTRAP_CSS', URL . '/public/bootstrap-5.3.2-dist/css/bootstrap.min.css');
+define('BOOTSTRAP_JS', URL . '/public/bootstrap-5.3.2-dist/js/bootstrap.min.js');
 ?>

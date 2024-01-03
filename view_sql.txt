@@ -1,0 +1,29 @@
+CREATE
+ ALGORITHM = UNDEFINED
+ SQL SECURITY DEFINER
+ VIEW `ver_anuncios_trabajo6`
+ AS SELECT
+    u.user_alias,
+    b.user_avatar,
+    a.anuncio_id,
+    a.anuncio_imagen,
+    a.anuncio_sector,
+    a.anuncio_vacante,
+    a.anuncio_descripcion,
+    a.anuncio_sueldo,
+    c.ubicacion_name,
+    a.anuncio_tag_contrato,
+    a.anuncio_tag_ubicacion,
+    a.anuncio_tag_formacion,
+    a.anuncio_tag_festivo,
+    a.anuncio_tag_horario,
+    a.anuncio_creado,
+    a.anuncio_editado
+FROM
+    anuncios a
+JOIN
+    users u ON a.anuncio_user = u.user_id
+JOIN
+    users b ON a.anuncio_user = b.user_id
+JOIN
+	ubicaciones c ON a.anuncio_ubicacion = c.ubicacion_id;

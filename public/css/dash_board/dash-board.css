@@ -264,9 +264,13 @@
 }
 .dbc-submenu-radio-container{
     width: 50%;
-    border: 1px solid red;
+    border-radius: 5px;
     display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /*
     flex-wrap: wrap;
+    */
 }
 .radio-selecttion-section label{
     background-color: white;

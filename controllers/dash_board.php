@@ -521,6 +521,7 @@ class NewPost extends PageController{
     public function post(){
         // Datos esperados
         $expected_data = [
+            'anuncio_user'          => $_SESSION['user_id'],
             'anuncio_imagen'        => isset($_POST['anuncio_imagen']) ? $_POST['anuncio_imagen'] : null,
             'anuncio_sector'        => isset($_POST['anuncio_sector']) ? $_POST['anuncio_sector'] : null,
             'anuncio_vacante'       => isset($_POST['anuncio_vacante']) ? $_POST['anuncio_vacante'] : null,
@@ -758,4 +759,22 @@ class EditPost extends PageController{
         }
     }
 }
+/*
+anuncio_user
+user_img
+anuncio_id 	
+anuncio_imagen 	
+anuncio_sector 	
+anuncio_vacante 	
+anuncio_descripcion 	 	
+anuncio_sueldo 		
+anuncio_ubicacion 	
+anuncio_tag_contrato 	 	
+anuncio_tag_ubicacion 	 	
+anuncio_tag_formacion 	 	
+anuncio_tag_festivo 	 	
+anuncio_tag_horario 	 	
+anuncio_creado 	 	
+anuncio_editado 
+*/
 ?>

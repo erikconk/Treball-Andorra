@@ -112,8 +112,9 @@
                             name="anuncio_sueldo" 
                             type="text" 
                             placeholder="Escriure solament la xifra sense el símbol d'euro." 
+                            maxlength="20"
                             <?php if(isset($this->args['data_post']['anuncio_sueldo'])) echo 'value=' . $this->args['data_post']['anuncio_sueldo'];?>
-                            maxlength="20">
+                            >
                     </div>
                     <div class="dbc-submenu-content-input">
                         <label for="anuncio_ubicacion">Ubicació del lloc de treball</label>
